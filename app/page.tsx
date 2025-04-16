@@ -104,7 +104,7 @@ export default function Home() {
           subject: data.subject
 }),
       });
-      setIsLoading(false);
+      
 
       if (response.ok) {
       toast({
@@ -118,12 +118,15 @@ export default function Home() {
         description: 'Something went wrong.',
       });
       }
+      
     } catch (error) {
       setIsLoading(false);
       toast({
       title: 'Error!',
       description: 'Something went wrong.',
       });
+    }finally{
+      setIsLoading(false);
     }
     };
 
