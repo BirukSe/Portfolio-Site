@@ -45,7 +45,7 @@ export default function Home() {
   const [showAllProjects, setShowAllProjects] = useState(false)
 
   // Intersection observer for each section
-  const useSectionObserver = (sectionId) => {
+  const useSectionObserver = (sectionId:any) => {
     const [ref, inView] = useInView({
       threshold: 0.3,
     })
