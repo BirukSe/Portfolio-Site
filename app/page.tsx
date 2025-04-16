@@ -81,14 +81,47 @@ export default function Home() {
   }
 
   // Handle contact form submission
-  const handleContactSubmit = (e:any) => {
-    e.preventDefault()
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
-    e.target.reset()
-  }
+  const handleContactSubmit = async (e: any) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log("my data is", data)
+
+    try {
+      const response = await fetch('/api/send-mail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          name: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          message: data.message,
+          subject: data.subject
+}),
+      });
+
+      if (response.ok) {
+      toast({
+        title: 'Message sent!',
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      form.reset();
+      } else {
+      toast({
+        title: 'Error!',
+        description: 'Something went wrong.',
+      });
+      }
+    } catch (error) {
+      toast({
+      title: 'Error!',
+      description: 'Something went wrong.',
+      });
+    }
+    };
 
   // Toggle showing all projects
   const toggleAllProjects = () => {
@@ -1399,7 +1432,9 @@ export default function Home() {
                           </label>
                           <input
                             id="first-name"
-                            className="flex h-14 w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            name="firstName"
+                            className
+                            ="flex h-14 w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                             placeholder="John"
                             required
                           />
@@ -1410,6 +1445,7 @@ export default function Home() {
                           </label>
                           <input
                             id="last-name"
+                            name="lastName"
                             className="flex h-14 w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                             placeholder="Doe"
                             required
@@ -1422,6 +1458,7 @@ export default function Home() {
                         </label>
                         <input
                           id="email"
+                          name="email"
                           type="email"
                           className="flex h-14 w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           placeholder="john.doe@example.com"
@@ -1434,6 +1471,7 @@ export default function Home() {
                         </label>
                         <input
                           id="subject"
+                          name="subject"
                           className="flex h-14 w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           placeholder="Project Inquiry"
                           required
@@ -1445,6 +1483,7 @@ export default function Home() {
                         </label>
                         <textarea
                           id="message"
+                          name="message"
                           className="flex min-h-[160px] w-full rounded-lg border border-input bg-background px-4 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           placeholder="Tell me about your project..."
                           required
