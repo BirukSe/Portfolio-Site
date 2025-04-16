@@ -46,6 +46,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showAllProjects, setShowAllProjects] = useState(false)
+  const [loading, setIsLoading]=useState(false);
 
   // Intersection observer for each section
   const useSectionObserver = (sectionId:any) => {
@@ -89,6 +90,7 @@ export default function Home() {
     console.log("my data is", data)
 
     try {
+      setIsLoading(true);
       const response = await fetch('/api/send-mail', {
       method: 'POST',
       headers: {
@@ -102,6 +104,7 @@ export default function Home() {
           subject: data.subject
 }),
       });
+      setIsLoading(false);
 
       if (response.ok) {
       toast({
@@ -116,6 +119,7 @@ export default function Home() {
       });
       }
     } catch (error) {
+      setIsLoading(false);
       toast({
       title: 'Error!',
       description: 'Something went wrong.',
@@ -1491,7 +1495,7 @@ export default function Home() {
                       </div>
                       <Button type="submit" className="w-full h-14 rounded-full text-lg">
                         <Send className="mr-3 h-5 w-5" />
-                        Send Message
+                        {loading?"Sending Message...":"Send Message"}
                       </Button>
                     </form>
                   </CardContent>
