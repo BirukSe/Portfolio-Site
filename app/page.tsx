@@ -359,7 +359,7 @@ export default function Home() {
                   Full-Stack Developer
                 </Badge>
               </div>
-              <h1 className="text-2xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight">
                 Hi, I'm <span className="text-primary">Biruk Seyoum</span>
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-[800px]">
