@@ -227,7 +227,7 @@ export default function Home() {
 
         <div className="absolute bottom-6 flex flex-col gap-4">
           <a
-            href="https://github.com/"
+            href="https://github.com/birukse"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors"
@@ -235,7 +235,7 @@ export default function Home() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/biruk-seyoum-b0b609299/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors"
@@ -320,12 +320,12 @@ export default function Home() {
 
               <div className="mt-auto pt-6 flex gap-4">
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/birukse" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/biruk-seyoum-b0b609299/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
@@ -790,7 +790,7 @@ export default function Home() {
                         </a>
                       </Button>
                       <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/birukse/codecraft" target="_blank" rel="noopener noreferrer">
                           <Github className="mr-3 h-5 w-5" />
                           Source Code
                         </a>
@@ -855,7 +855,7 @@ export default function Home() {
                         </a>
                       </Button>
                       <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/BirukSe/Video-Conferencing-Platform" target="_blank" rel="noopener noreferrer">
                           <Github className="mr-3 h-5 w-5" />
                           Source Code
                         </a>
@@ -913,7 +913,7 @@ export default function Home() {
                         </a>
                       </Button>
                       <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/birukse/kuriftu" target="_blank" rel="noopener noreferrer">
                           <Github className="mr-3 h-5 w-5" />
                           Source Code
                         </a>
@@ -978,7 +978,7 @@ export default function Home() {
                               </a>
                             </Button>
                             <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                              <a href="https://github.com/birukse/social-v2" target="_blank" rel="noopener noreferrer">
                                 <Github className="mr-3 h-5 w-5" />
                                 Source Code
                               </a>
@@ -1041,7 +1041,7 @@ export default function Home() {
                               </a>
                             </Button>
                             <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                              <a href="https://github.com/birukse" target="_blank" rel="noopener noreferrer">
                                 <Github className="mr-3 h-5 w-5" />
                                 Source Code
                               </a>
@@ -1119,7 +1119,7 @@ export default function Home() {
                               </a>
                             </Button>
                             <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                              <a href="https://github.com/birukse" target="_blank" rel="noopener noreferrer">
+                              <a href="https://github.com/BirukSe/Document-Verification-System" target="_blank" rel="noopener noreferrer">
                                 <Github className="mr-3 h-5 w-5" />
                                 Source Code
                               </a>
@@ -1357,7 +1357,7 @@ export default function Home() {
                   <h4 className="text-xl font-semibold mb-6">Connect with me</h4>
                   <div className="flex gap-6">
                     <a
-                      href="https://github.com/"
+                      href="https://github.com/birukse"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -1365,7 +1365,7 @@ export default function Home() {
                       <Github className="h-7 w-7" />
                     </a>
                     <a
-                      href="https://linkedin.com/"
+                      href="https://www.linkedin.com/in/biruk-seyoum-b0b609299/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -1474,7 +1474,7 @@ export default function Home() {
                 </p>
                 <div className="flex gap-6 mt-8">
                   <a
-                    href="https://github.com/"
+                    href="https://github.com/birukse"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -1482,8 +1482,8 @@ export default function Home() {
                     <Github className="h-6 w-6" />
                   </a>
                   <a
-                    href="https://linkedin.com/"
-                    target="_blank"
+                    href="https://www.linkedin.com/in/biruk-seyoum-b0b609299/"
+                   
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
