@@ -8,6 +8,9 @@ import bura from '../assets/biruke-png.jpg'
 import code from '../assets/code.png'
 import kuriftu from '../assets/kuriftu.png'
 import vid from '../assets/vid-conf.png'
+import social from '../assets/image.png'
+import feedback from '../assets/feedback.png'
+import verify from '../assets/verify.png'
 import {
   Github,
   Linkedin,
@@ -936,7 +939,7 @@ export default function Home() {
                         <div className="relative overflow-hidden rounded-xl aspect-video lg:order-2">
                           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <Image
-                            src="/placeholder.svg?height=600&width=800"
+                            src={social}
                             alt="Social Media Site Preview"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -997,7 +1000,7 @@ export default function Home() {
                         <div className="relative overflow-hidden rounded-xl aspect-video">
                           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <Image
-                            src="/placeholder.svg?height=600&width=800"
+                            src={feedback}
                             alt="Kuriftu Feedback Platform Preview"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1056,57 +1059,7 @@ export default function Home() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                      <div className="grid lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
-                        <div className="relative overflow-hidden rounded-xl aspect-video lg:order-2">
-                          <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          <Image
-                            src="/placeholder.svg?height=600&width=800"
-                            alt="Book Tracking Site Preview"
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
-                        <div className="space-y-8 lg:order-1">
-                          <Badge className="px-4 py-2 text-lg bg-primary/10 text-primary border-primary/20">
-                            Project
-                          </Badge>
-                          <h3 className="text-3xl font-bold">Booky Tracker</h3>
-                          <p className="text-xl text-muted-foreground">Book Upload & Reading Platform</p>
-                          <p className="text-lg leading-relaxed">
-                            Created a comprehensive book tracking platform where users can upload books and read them
-                            online. The application features user authentication, book categorization, reading progress
-                            tracking, and a responsive reading interface optimized for different devices.
-                          </p>
-                          <div className="flex flex-wrap gap-3">
-                            <Badge variant="secondary" className="text-base px-4 py-2">
-                              React
-                            </Badge>
-                            <Badge variant="secondary" className="text-base px-4 py-2">
-                              Firebase
-                            </Badge>
-                            <Badge variant="secondary" className="text-base px-4 py-2">
-                              PDF Processing
-                            </Badge>
-                            <Badge variant="secondary" className="text-base px-4 py-2">
-                              User Authentication
-                            </Badge>
-                          </div>
-                          <div className="flex gap-6">
-                            <Button className="rounded-full px-8 py-6 text-lg" asChild>
-                              <a href="https://booky-tracker.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="mr-3 h-5 w-5" />
-                                Live Demo
-                              </a>
-                            </Button>
-                            <Button variant="outline" className="rounded-full px-8 py-6 text-lg" asChild>
-                              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                                <Github className="mr-3 h-5 w-5" />
-                                Source Code
-                              </a>
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
+                     
                     </motion.div>
 
                     {/* Project 7 - Document Verification System */}
@@ -1121,7 +1074,7 @@ export default function Home() {
                         <div className="relative overflow-hidden rounded-xl aspect-video">
                           <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <Image
-                            src="/placeholder.svg?height=600&width=800"
+                            src={verify}
                             alt="Document Verification System Preview"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
